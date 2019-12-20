@@ -1109,12 +1109,13 @@ window.send_log = function (_user_name,_event_type,_event_key) {
     $.cwise_xAPI_setUsername(_username);
     //送出登入記錄->lrs
     var _verb_id = "https://w3id.org/xapi/dod-isd/verbs/click"; //LOGIN
-    var _object_id = "http://dlll-xapi.nccu.edu.tw//activities/lms"; //LMS
+    var _object_id = "http://dlll-xapi.nccu.edu.tw/activities/lms"; //LMS
     var _url=window.top.location.href;
     var _params = {
         verb_id: _verb_id,
         object_id: _object_id,
-        url: _url
+        url: _url,
+        result:'xxxx123456xxx'
         //result_response_url: _url,
         //result_response_node: "null",
         //result_response_statement:"null"
