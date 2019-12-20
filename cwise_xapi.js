@@ -13,7 +13,7 @@
  */
  var _WHY_cwise_getVerbDisplay_is_not_a_function_T_T = function () {
 	if (typeof($.cwise_getVerbDisplay) !== "function") {
-		$.getScript("/webapp/javascript/xapi/cwise_verb_config.js", function(){
+		$.getScript("https://billxu0521.github.io/Xapi-project/cwise_verb_config.js", function(){
 			console.log(" loaded	cwise_verb_config.js");
 						
 		});
@@ -22,7 +22,7 @@
 
  var _WHY_cwise_getObjectNameDescription_is_not_a_function_T_T = function () {
 	if (typeof($.cwise_getObjectNameDescription) !== "function") {
-		$.getScript("/webapp/javascript/xapi/cwise_object_config.js", function(){
+		$.getScript("https://billxu0521.github.io/Xapi-project/cwise_object_config.js", function(){
 			
 			console.log("loaded	cwise_object_config.js");
 						
@@ -33,7 +33,7 @@
  var _WHY_cwise_CWISE_LRS_CONFIG_is_not_correct_T_T = function () {
 	if (typeof($.CWISE_LRS_CONFIG) === "undefined") {
 
-		$.getScript("/webapp/javascript/xapi/cwise_lrs_config.js", function(){
+		$.getScript("https://billxu0521.github.io/Xapi-project/cwise_lrs_config.js", function(){
 			
 			console.log("loaded	cwise_lrs_config.js");
 						
@@ -234,7 +234,7 @@
 				"extensions": 			
 					{
 				
-					"http://dev-cwise.dlll.nccu.edu.tw/": {
+					"http://dspace.ccstw.nccu.edu.tw/": {
 					  "url": _url,
 					  "node": _currentNode,
 					  "runId": _params.runId,
@@ -279,7 +279,7 @@
 		//result
 		var _result={
 			"extensions": {
-						"http://dev-cwise.dlll.nccu.edu.tw/": 
+						"http://dspace.ccstw.nccu.edu.tw/": 
 						{
 							"question":_params.ques,
 							"answer":_params.ans,
