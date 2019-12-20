@@ -326,8 +326,9 @@
 			"result": //_result
 			{
 				"response": "201511241706"
-				"response": _response,
-				 "extensions": {
+				
+				//"response": _response,
+				"extensions": {
 						"http://dev-cwise.dlll.nccu.edu.tw/webapp/preview.html?projectId=400": 
 						{
 							question_01:"123",
@@ -337,6 +338,7 @@
 							note: "blablabla..."
 						}
 				}
+				
 			}
 			
 		};
