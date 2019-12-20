@@ -13,8 +13,18 @@ if (_local_debug === true) {
     console.log("[LOCAL TEST MODE]");
 }
 else {
-    CSS_URL = "https://billxu0521.github.io/GA-project/config/vinson.rd.ssic.nccu.edu.tw.css";
-    LIB_URL = "https://billxu0521.github.io/GA-project/ga_inject_lib.js";
+    CSS_URL = "https://billxu0521.github.io/Xapi-project/config/nccuir.lib.nccu.edu.tw.css";
+    LIB_URL = "https://billxu0521.github.io/Xapi-project/ga_inject_lib.js";
+    SHA_URL = "https://billxu0521.github.io/Xapi-project/2.5.3-crypto-sha1.js";
+    BASE_URL = "https://billxu0521.github.io/Xapi-project/base64.js";
+    WRAPPER_URL = "https://billxu0521.github.io/Xapi-project/xapiwrapper.min.js";
+
+    LRS_URL = "https://billxu0521.github.io/Xapi-project/cwise_lrs_config.js";
+    OBJ_URL = "https://billxu0521.github.io/Xapi-project/cwise_object_config.js";
+    VERB_URL = "https://billxu0521.github.io/Xapi-project/cwise_verb_config.js";
+    XAPI_URL = "https://billxu0521.github.io/Xapi-project/cwise_xapi.js";
+
+    CACHE_LIB_URL = "https://billxu0521.github.io/Xapi-project/cache.js";
 }
 
 
@@ -49,6 +59,14 @@ var exec = function () {
 // --------------------------------------
 
 $(function () {
+    $.getScript(CACHE_LIB_URL);
+    $.getScript(BASE_URL);
+    $.getScript(WRAPPER_URL);
+    $.getScript(SHA_URL);
+    $.getScript(LRS_URL);
+    $.getScript(OBJ_URL);
+    $.getScript(VERB_URL);
+    $.getScript(XAPI_URL);
     $.getScript(LIB_URL, function () {
         ga_setup(function () {
             exec();
