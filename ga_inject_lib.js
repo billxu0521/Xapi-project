@@ -482,7 +482,7 @@ window.ga_mouse_click_event = function (_selector, _event_type, _name) {
 window.ga_mouse_click_event_trigger = function (_obj, _selector, _name, _event_type, _event_key) {
     var _name_data = _get_element_name(_obj, _selector, _name);
     _console_log([_event_type, _name_data, _event_key]);
-    ga("send", "event", _event_type, _name_data, _event_key);
+    send_log("send", "event", _event_type, _name_data, _event_key);
 };
 
 /**
@@ -1102,6 +1102,30 @@ window.getCookie = function(cname) {
 	}
 	return "";
 };
+
+window.send_log = function (_user_name,_event_type,_event_key) {
+    var _username = _user_name;
+    //設定目前使用者
+    $.cwise_xAPI_setUsername(_username);
+    //送出登入記錄->lrs
+    var _verb_id = "https://w3id.org/xapi/dod-isd/verbs/click"; //LOGIN
+    var _object_id = "http://dlll-xapi.nccu.edu.tw/activities/lms"; //LMS
+    var _url=window.top.location.href;
+    var _params = {
+        verb_id: _verb_id,
+        object_id: _object_id,
+        url: _event_key
+        //result_response_url: _url,
+        //result_response_node: "null",
+        //result_response_statement:"null"
+        //object_id: "website"
+    }
+    $.cwise_xAPI_send(_params);
+    console.log("moreInfo:"+_params.moreInfo);
+});
+    
+};
+
 
 // -----------------------------------------------
 

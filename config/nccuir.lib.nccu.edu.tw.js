@@ -9,44 +9,30 @@ GA_TRACE_CODE = "UA-107585606-1";
 var _local_debug = false;
 
 if (_local_debug === true) {
-    CSS_URL = "https://localhost/GA-project/config/nccuir.lib.nccu.edu.tw.css";
-    LIB_URL = "https://localhost/GA-project/ga_inject_lib.js";
-    CACHE_LIB_URL = "https://localhost/GA-project/cache.js";
+    CSS_URL = "https://localhost/Xapi-project/config/nccuir.lib.nccu.edu.tw.css";
+    LIB_URL = "https://localhost/Xapi-project/ga_inject_lib.js";
+    CACHE_LIB_URL = "https://localhost/Xapi-project/cache.js";
     console.log("[LOCAL TEST MODE]");
 }
 else {
-    CSS_URL = "https://billxu0521.github.io/GA-project/config/nccuir.lib.nccu.edu.tw.css";
-    LIB_URL = "https://billxu0521.github.io/GA-project/ga_inject_lib.js";
-    CACHE_LIB_URL = "https://billxu0521.github.io/GA-project/cache.js";
+    CSS_URL = "https://billxu0521.github.io/Xapi-project/config/nccuir.lib.nccu.edu.tw.css";
+    LIB_URL = "https://billxu0521.github.io/Xapi-project/ga_inject_lib.js";
+    SHA_URL = "https://billxu0521.github.io/Xapi-project/2.5.3-crypto-sha1.js";
+    BASE_URL = "https://billxu0521.github.io/Xapi-project/base64.js";
+    WRAPPER_URL = "https://billxu0521.github.io/Xapi-project/xapiwrapper.min.js";
+
+    LRS_URL = "https://billxu0521.github.io/Xapi-project/cwise_lrs_config.js";
+    OBJ_URL = "https://billxu0521.github.io/Xapi-project/cwise_object_config.js";
+    VERB_URL = "https://billxu0521.github.io/Xapi-project/cwise_verb_config.js";
+    XAPI_URL = "https://billxu0521.github.io/Xapi-project/cwise_xapi.js";
+
+    CACHE_LIB_URL = "https://billxu0521.github.io/Xapi-project/cache.js";
 }
 
 
 var exec = function () {
     auto_set_user_id(); 
     
-    //偵測語法
-    //ga_mouse_click_event("選擇要素","準則");
-    /*
-    ga_mouse_click_event(".btn","Click");
-    ga_mouse_click_event("input.gsc-search-button gsc-search-button-v2","Click"); //GOOGLE站內搜尋
-    ga_input_keydown_enter_event(".gsc-search-box input.gsc-input", "Click", function (_input) {
-        return $(_input).val();
-    });
-    ga_mouse_click_event(".btn scholar_href","Click");
-    ga_mouse_click_event(".btn mouse_clickClick","Click"); //首頁「統計資訊-更多...>>」、「學術動態-更多...>>」…首頁的眾多滑鼠事件
-    ga_mouse_click_event(".btn scholar_href mouse_clickClick","Click");
-    ga_mouse_click_event(".btn scholar_href","Click");
-    ga_mouse_click_event(".btn btn-info btn-lg mouse_clickClick","Click"); //首頁「研究/學術產出」搜尋按鈕
-    ga_mouse_click_event(".btn glyphicon glyphicon-search","Click");
-    ga_input_keydown_enter_event(".form-control input-lg", "Click", function (_input) {
-        return $(_input).val();
-    });
-    ga_mouse_click_event("[href]", "Click", function (_ele) {
-        return _ele.text();});
-    ga_submit_event("form", "Form", function (_ele) {
-        return _ele.text();});
-    */
-
     //思洋實驗用
     //主頁
     ga_mouse_click_event("#search_scholar","Home_Search_Researcher", function (_input) {
@@ -183,6 +169,14 @@ let listcheck = function (){
 
 $(function () {
     $.getScript(CACHE_LIB_URL);
+    $.getScript(BASE_URL);
+    $.getScript(WRAPPER_URL);
+    $.getScript(SHA_URL);
+    $.getScript(LRS_URL);
+    $.getScript(OBJ_URL);
+    $.getScript(VERB_URL);
+    $.getScript(XAPI_URL);
+
     $.getScript(LIB_URL, function () {
         ga_setup(function () {
             exec();
