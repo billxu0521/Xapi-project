@@ -53,7 +53,7 @@
 	 * ***********************/
 	$.cwise_xAPI_setUsername = function(_username){
 		
-		$.cookie('username', _username, { path: '/' });//Save username in cookie
+		Cookies.get('username', _username, { path: '/' });//Save username in cookie
 	
 	};//$.cwise_xAPI_setUsername = function(_username){
 
@@ -64,12 +64,12 @@
 	 * ***********************/	
 	$.cwise_xAPI_getUsername = function(){
 	
-		var _username = $.cookie('username');
+		var _username = Cookies.get('username');
 		if ( _username == null ){
 			_username = "guest";
-			//$.cookie('username', _user, { path: '/' });//Save username in cookie
+			//Cookies.get('username', _user, { path: '/' });//Save username in cookie
 		}
-		//alert ("Now is " +$.cookie('username'));
+		//alert ("Now is " +Cookies.get('username'));
 		return _username;
 	};//$.cwise_xAPI_getUsername = function(){
 	
@@ -124,7 +124,7 @@
 		//console.log("moreInfo:"+_params.moreInfo);
 		
 		var _currentNode=_params.currentNode;
-		var _cookieNode=$.cookie('currentNode');
+		var _cookieNode=Cookies.get('currentNode');
 		
 		// var _runId= _params.runId;
 		
@@ -423,7 +423,7 @@
 			// //console.log(_stmt);
 			
 
-			// var _username = $.cookie('username');		
+			// var _username = Cookies.get('username');		
 			// alert("user is " + _username);
 		
 			// });//taeget.click(function(){
