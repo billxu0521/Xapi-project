@@ -1114,14 +1114,14 @@ window.send_log = function (_user_name,_event_type,_event_key) {
     var _params = {
         verb_id: _verb_id,
         object_id: _object_id,
-        url: _event_key
+        url: _url
         //result_response_url: _url,
         //result_response_node: "null",
         //result_response_statement:"null"
         //object_id: "website"
     }
     $.cwise_xAPI_send(_params);
-    console.log("moreInfo:"+_params);
+    console.log(_params);
     console.log("moreInfo:"+_params.moreInfo);
     
 };
