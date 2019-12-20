@@ -1114,8 +1114,8 @@ window.send_log = function (_user_name,_event_type,_event_key) {
     var _params = {
         verb_id: _verb_id,
         object_id: _object_id,
-        url: _url,
-        result:'xxxx123456xxx'
+        url: _url
+        //result:'xxxx123456xxx'
         //result_response_url: _url,
         //result_response_node: "null",
         //result_response_statement:"null"
