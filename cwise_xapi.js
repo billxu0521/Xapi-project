@@ -329,7 +329,7 @@
 				
 				//"response": _response,
 				"extensions": {
-						"http://dev-cwise.dlll.nccu.edu.tw/webapp/preview.html?projectId=400": 
+						"http://dspace.ccstw.nccu.edu.tw/": 
 						{
 							question_01:"123",
 							answer_01: "abc",
