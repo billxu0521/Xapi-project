@@ -305,11 +305,11 @@
 				}
 		};
 		
-		// var _response = {
-			// "url" :  _params.result_response_url,
-			// "node" : _params.result_response_node,
-			// "statement" : _params.result_response_statement
-		// };
+		var _response = {
+			"url" :  _params.result_response_url,
+			"node" : _params.result_response_node,
+			"statement" : _params.result_response_statement
+		};
 		// _response=JSON.stringify(_response);   
 
 		//----stmt 測試用-------------			
@@ -323,21 +323,21 @@
 			"object" : _obj,
 			//"object" : _object_id
 			
-			 "result": _result
-			 //{
-				 // "response": "201511241706"
-				//"response": _response,
-				 // "extensions": {
-						// "http://dev-cwise.dlll.nccu.edu.tw/webapp/preview.html?projectId=400": 
-						// {
-							// question_01:"123",
-							// answer_01: "abc",
-							// question_02:"測試",
-							// answer_02: "abc4",
-							// note: "blablabla..."
-						// }
-				// }
-			 //}
+			"result": //_result
+			{
+				"response": "201511241706"
+				"response": _response,
+				 "extensions": {
+						"http://dev-cwise.dlll.nccu.edu.tw/webapp/preview.html?projectId=400": 
+						{
+							question_01:"123",
+							answer_01: "abc",
+							question_02:"測試",
+							answer_02: "abc4",
+							note: "blablabla..."
+						}
+				}
+			}
 			
 		};
 		
