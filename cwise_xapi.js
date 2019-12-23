@@ -279,37 +279,20 @@
 		//result
 		var _result={
 			"extensions": {
-						"http://dspace.ccstw.nccu.edu.tw/": 
+						_params.url: 
 						{
-							"question":_params.ques,
-							"answer":_params.ans,
-							"select":_params.select,
-							"txt":_params.txt,
-							"pageX": _params.pageX,
-							"pageY": _params.pageY,
-							"button": _params.button,
-							"exp_time": _params.exp_time,
-							"object": _params.object,
-							"structure": _params.structure,
-							"density": _params.density,
-							"float_sink": _params.float_sink,
-							"weight": _params.weight,
-							"volume": _params.volume,
-							"under_volume": _params.under_volume,
-							"liquid_density": _params.liquid_density,
-							"buoyancy": _params.buoyancy,
-							"sys_annotation": _params.sys_annotation,
-							"txt2": _params.txt2,
-							"select2": _params.select2
+							"event_type":_params.event_type,
+							"event_key":_params.event_key
 						}
 				}
 		};
-		
+		/*
 		var _response = {
 			"url" :  _params.result_response_url,
 			"node" : _params.result_response_node,
 			"statement" : _params.result_response_statement
 		};
+		*/
 		// _response=JSON.stringify(_response);   
 
 		//----stmt 測試用-------------			
@@ -324,6 +307,7 @@
 			//"object" : _object_id
 			
 			"result": //_result
+			/*
 			{
 				"response": "201511241706",
 				
@@ -339,7 +323,7 @@
 						}
 				}
 				
-			}
+			}*/
 			
 		};
 		
