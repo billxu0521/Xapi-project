@@ -45,7 +45,7 @@
 	_WHY_cwise_getVerbDisplay_is_not_a_function_T_T();
 	_WHY_cwise_getObjectNameDescription_is_not_a_function_T_T();
 	_WHY_cwise_CWISE_LRS_CONFIG_is_not_correct_T_T();
-	
+	var _site=window.top.location.href;
 	/* **********************
 	 * set目前使用者名稱並存入cookie
 	 * set username and save in cookie
@@ -125,7 +125,7 @@
 		
 		var _currentNode=_params.currentNode;
 		var _cookieNode=Cookies.get('currentNode');
-		let _site = "\"" + (_params.site).toString() + "\"";
+		
 		// var _runId= _params.runId;
 		
 		// var _pageX= _params.pageX;

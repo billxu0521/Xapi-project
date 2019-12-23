@@ -1117,7 +1117,6 @@ window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
         verb_id: _verb_id,
         object_id: _object_id,
         url: _url,
-        site:_object_id,
         event_type:_event_type,
         event_key:_event_key,
         event_content:_event_content
