@@ -250,7 +250,7 @@
 		console.trace(_currentNode);
 		console.log("3._obj", _object_id);
 		 
-		console.log(_site);
+		console.log(typeof(_site));
 		//----stmt 測試用-------------			
 		var stmt = {
 			"actor" : _actor,
