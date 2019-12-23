@@ -306,7 +306,7 @@
 			"object" : _obj,
 			//"object" : _object_id
 			
-			"result": //_result
+			"result": _result
 			/*
 			{
 				"response": "201511241706",
