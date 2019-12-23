@@ -11,47 +11,47 @@
  * Sign in btn and get username to save in cookie
  * get j_username
  */
- var _WHY_cwise_getVerbDisplay_is_not_a_function_T_T = function () {
-	if (typeof($.cwise_getVerbDisplay) !== "function") {
-		$.getScript("https://billxu0521.github.io/Xapi-project/cwise_verb_config.js", function(){
-			console.log(" loaded	cwise_verb_config.js");
+ var _WHY_getVerbDisplay_is_not_a_function_T_T = function () {
+	if (typeof($.getVerbDisplay) !== "function") {
+		$.getScript("https://billxu0521.github.io/Xapi-project/verb_config.js", function(){
+			console.log(" loaded	verb_config.js");
 						
 		});
 	}
 };
 
- var _WHY_cwise_getObjectNameDescription_is_not_a_function_T_T = function () {
-	if (typeof($.cwise_getObjectNameDescription) !== "function") {
-		$.getScript("https://billxu0521.github.io/Xapi-project/cwise_object_config.js", function(){
+ var _WHY_getObjectNameDescription_is_not_a_function_T_T = function () {
+	if (typeof($.getObjectNameDescription) !== "function") {
+		$.getScript("https://billxu0521.github.io/Xapi-project/object_config.js", function(){
 			
-			console.log("loaded	cwise_object_config.js");
+			console.log("loaded	object_config.js");
 						
 		});
 	}
 };
 
- var _WHY_cwise_CWISE_LRS_CONFIG_is_not_correct_T_T = function () {
-	if (typeof($.CWISE_LRS_CONFIG) === "undefined") {
+ var _WHY_LRS_CONFIG_is_not_correct_T_T = function () {
+	if (typeof($.LRS_CONFIG) === "undefined") {
 
-		$.getScript("https://billxu0521.github.io/Xapi-project/cwise_lrs_config.js", function(){
+		$.getScript("https://billxu0521.github.io/Xapi-project/lrs_config.js", function(){
 			
-			console.log("loaded	cwise_lrs_config.js");
+			console.log("loaded	lrs_config.js");
 						
 		});
 	}
 };
 
 (function ($) {
-	_WHY_cwise_getVerbDisplay_is_not_a_function_T_T();
-	_WHY_cwise_getObjectNameDescription_is_not_a_function_T_T();
-	_WHY_cwise_CWISE_LRS_CONFIG_is_not_correct_T_T();
+	_WHY_getVerbDisplay_is_not_a_function_T_T();
+	_WHY_getObjectNameDescription_is_not_a_function_T_T();
+	_WHY_LRS_CONFIG_is_not_correct_T_T();
 	var _site=window.top.location.href;
 	/* **********************
 	 * set目前使用者名稱並存入cookie
 	 * set username and save in cookie
 	 * input (str) _username 
 	 * ***********************/
-	$.cwise_xAPI_setUsername = function(_username){
+	$.xAPI_setUsername = function(_username){
 		
 		Cookies.get('username', _username, { path: '/' });//Save username in cookie
 	
@@ -62,7 +62,7 @@
 	 * get username 
 	 * return _username
 	 * ***********************/	
-	$.cwise_xAPI_getUsername = function(){
+	$.xAPI_getUsername = function(){
 	
 		var _username = Cookies.get('username');
 		if ( _username == null ){
@@ -76,7 +76,7 @@
 	/**
 	 * @author 布丁 20150909
 	 */ 
-	$.cwise_getCourseURL = function () {
+	$.getCourseURL = function () {
 		return window.top.location.href;
 	};
 	
@@ -105,7 +105,7 @@
 	 *   note: "string", // 其它資料，optional
 	 * }
 	 */
-	$.cwise_xAPI_send = function (_params) {
+	$.xAPI_send = function (_params) {
 	
 		var _verb_id;
 		if (typeof(_params.verb_id) === "string") {
@@ -148,7 +148,7 @@
 		// var _sys_annotaion=_params.sys_annotation;
 		
 		//取得lrs設定檔
-		var conf = $.CWISE_LRS_CONFIG ;
+		var conf = $.LRS_CONFIG ;
 		
 		//------------------------------------------------------------
 		// var conf = {
@@ -167,7 +167,7 @@
 		/** actor
 		 * name string | mbox mailto:
 		 **/
-		var _user_id = $.cwise_xAPI_getUsername();
+		var _user_id = $.xAPI_getUsername();
 		var _default_mail = "mailto: dlll@example.com"; //信箱設定!!
 		//var _default_mail = $.CWISE_ACTOR_CONFIG; 
 		
@@ -183,7 +183,7 @@
 		 * verb_id url | display 
 		 */
 		
-		var _verb_display = $.cwise_getVerbDisplay( _verb_id );
+		var _verb_display = $.getVerbDisplay( _verb_id );
 		
         console.log("2.verb_display", _verb_display, _verb_id);		
 		//"id":"http://exp-lrs-2015.dlll.nccu.edu.tw:15180/xAPI/verbs/attempted",
@@ -208,7 +208,7 @@
 		if (typeof(_object_description) === "number") {
 			_type = "type:number";
 		}
-		var _object_display = $.cwise_getObjectNameDescription( _object_id );
+		var _object_display = $.getObjectNameDescription( _object_id );
         console.log("3-2.object_display", _object_display, _object_id);	
 		//console.log(_extensions);
 		

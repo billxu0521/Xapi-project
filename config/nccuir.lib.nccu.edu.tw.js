@@ -21,10 +21,10 @@ else {
     BASE_URL = "https://billxu0521.github.io/Xapi-project/base64.js";
     WRAPPER_URL = "https://billxu0521.github.io/Xapi-project/xapiwrapper.min.js";
 
-    LRS_URL = "https://billxu0521.github.io/Xapi-project/cwise_lrs_config.js";
-    OBJ_URL = "https://billxu0521.github.io/Xapi-project/cwise_object_config.js";
-    VERB_URL = "https://billxu0521.github.io/Xapi-project/cwise_verb_config.js";
-    XAPI_URL = "https://billxu0521.github.io/Xapi-project/cwise_xapi.js";
+    LRS_URL = "https://billxu0521.github.io/Xapi-project/lrs_config.js";
+    OBJ_URL = "https://billxu0521.github.io/Xapi-project/object_config.js";
+    VERB_URL = "https://billxu0521.github.io/Xapi-project/verb_config.js";
+    XAPI_URL = "https://billxu0521.github.io/Xapi-project/xapi.js";
 
     CACHE_LIB_URL = "https://billxu0521.github.io/Xapi-project/cache.js";
 }

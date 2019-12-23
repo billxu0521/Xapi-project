@@ -18,7 +18,7 @@ Config.actor = { "mbox":"pulipuli.chen@gmail.com", "name":"pudding" };
 	 */
 	$.CWISE_LRS_CONFIG = {
         "endpoint" : "http://140.119.61.113:1510/xAPI/",
-        "auth" : "Basic " + toBase64('cwise4user:cwise4pass')
+        "auth" : "Basic " + toBase64('dlll4user:dlll4pass')
 	};
 	
 	

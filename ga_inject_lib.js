@@ -1107,7 +1107,7 @@ window.getCookie = function(cname) {
 window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
     var _username = _user_name;
     //設定目前使用者
-    $.cwise_xAPI_setUsername(_username);
+    $.xAPI_setUsername(_username);
     console.log(_event_content);
     //送出登入記錄->lrs
     var _verb_id = "https://w3id.org/xapi/dod-isd/verbs/click"; //LOGIN
@@ -1127,7 +1127,7 @@ window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
             }
         }   
     }
-    $.cwise_xAPI_send(_params);
+    $.xAPI_send(_params);
     console.log(_params);
     
 };
