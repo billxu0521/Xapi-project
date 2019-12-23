@@ -277,7 +277,7 @@
 		// };	//var _stmt = {		
 		
 		//result
-		
+		/*
 		var _result={
 			"extensions": {
 						_site: 
@@ -287,8 +287,7 @@
 						}
 				}
 		};
-		console.log(_result);
-		/*
+		
 		var _response = {
 			"url" :  _params.result_response_url,
 			"node" : _params.result_response_node,
@@ -308,7 +307,14 @@
 			"object" : _obj,
 			//"object" : _object_id
 			
-			"result": _result
+			"result": 
+				"extensions": {
+							_site: 
+							{
+								event_type:_params.event_type,
+								event_key:_params.event_key
+							}
+					}
 			/*
 			{
 				"response": "201511241706",
