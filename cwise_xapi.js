@@ -279,7 +279,7 @@
 		//result
 		var _result={
 			"extensions": {
-						_params.url: 
+						_params.site: 
 						{
 							"event_type":_params.event_type,
 							"event_key":_params.event_key
