@@ -347,7 +347,7 @@ window.ga_mouse_over_event = function (_selector, _event_type, _name) {
     var _event_key = 'mouse_over';
     $(_selector).mouseover(function () {
         var _name_data = _get_element_name($(this), _event_type, _name);
-        console.log(_name_data)
+        console.log(_name_data);
         _console_log([_event_type, _name_data, _event_key]);
         ga("send", "event", _event_type, _name_data, _event_key);   
     });
