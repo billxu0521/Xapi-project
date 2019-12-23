@@ -247,10 +247,9 @@
 			},
 			"objectType": "Activity"
 		};
-		console.trace(_currentNode);
 		console.log("3._obj", _object_id);
 		 
-		console.log(typeof(_site));
+		console.log(_params.event_content);
 		//----stmt 測試用-------------			
 		var stmt = {
 			"actor" : _actor,
