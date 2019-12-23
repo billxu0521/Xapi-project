@@ -249,6 +249,18 @@
 		};
 		console.log("3._obj", _object_id);
 		 
+		var _result = {
+			"response": "",
+					"extensions": {
+							_site: 
+							{
+								"event_type":_params.event_type,
+								"event_key":_params.event_key,
+								"event_content":_params.event_content
+							}
+					}	
+		}
+
 		console.log(_site);
 		//----stmt 測試用-------------			
 		var stmt = {
@@ -261,18 +273,8 @@
 			"object" : _obj,
 			//"object" : _object_id
 			
-			"result": //_result{}
-				{
-					"response": "201511241706",
-					"extensions": {
-							_site: 
-							{
-								"event_type":_params.event_type,
-								"event_key":_params.event_key,
-								"event_content":_params.event_content
-							}
-					}
-				}
+			"result": _result
+				
 			/*
 			{
 				"response": "201511241706",
