@@ -265,7 +265,7 @@
 				{
 					"response": "201511241706",
 					"extensions": {
-							_site: 
+							"\""+_site+"\"": 
 							{
 								"event_type":_params.event_type,
 								"event_key":_params.event_key,
