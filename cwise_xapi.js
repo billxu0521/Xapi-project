@@ -287,7 +287,7 @@
 						}
 				}
 		};
-		console.log(_result);
+		console.log(_params.event_type);
 		/*
 		var _response = {
 			"url" :  _params.result_response_url,
