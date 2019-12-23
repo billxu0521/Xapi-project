@@ -125,7 +125,7 @@
 		
 		var _currentNode=_params.currentNode;
 		var _cookieNode=Cookies.get('currentNode');
-		let _site = _params.site;
+		let _site = (_params.site).toString();
 		// var _runId= _params.runId;
 		
 		// var _pageX= _params.pageX;
@@ -266,7 +266,7 @@
 				{
 					"response": "201511241706",
 					"extensions": {
-							"http://dspace.ccstw.nccu.edu.tw/": 
+							_site: 
 							{
 								question_01:"123",
 								answer_01: "abc",
