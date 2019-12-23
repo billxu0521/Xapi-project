@@ -482,7 +482,7 @@ window.ga_mouse_click_event = function (_selector, _event_type, _name) {
 window.ga_mouse_click_event_trigger = function (_obj, _selector, _name, _event_type, _event_key) {
     var _name_data = _get_element_name(_obj, _selector, _name);
     _console_log([_event_type, _name_data, _event_key]);
-    send_log("send", "event", _event_type, _name_data, _event_key);
+    send_log("send", "event", _event_type, _name, _event_key,_name_data);
 };
 
 /**
@@ -1103,7 +1103,7 @@ window.getCookie = function(cname) {
 	return "";
 };
 
-window.send_log = function (_user_name,_event_type,_event_key) {
+window.send_log = function (_user_name,_event_type,_event_key,_event_content) {
     var _username = _user_name;
     //設定目前使用者
     $.cwise_xAPI_setUsername(_username);
@@ -1117,7 +1117,8 @@ window.send_log = function (_user_name,_event_type,_event_key) {
         url: _url,
         site:_object_id,
         event_type:_event_type,
-        event_key:_event_key
+        event_key:_event_key,
+        event_content:_event_content
     }
     $.cwise_xAPI_send(_params);
     console.log(_params);
