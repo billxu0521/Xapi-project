@@ -268,11 +268,8 @@
 					"extensions": {
 							"http://dspace.ccstw.nccu.edu.tw/": 
 							{
-								question_01:"123",
-								answer_01: "abc",
-								question_02:"測試",
-								answer_02: "abc4",
-								note: "blablabla..."
+								event_type:_params.event_type,
+								event_key:_params.event_key
 							}
 					}
 				}
