@@ -98,7 +98,7 @@
 	// * $.cwise_getObject("login", "name");
 	 //* $.cwise_getObject("login", "id");
 	
-	$.cwise_getObject = function (_object_id, _field) {
+	$.getObject = function (_object_id, _field) {
 		var _display;
 		
 		if (typeof($.object_config[_object_id]) !== "undefined" 
