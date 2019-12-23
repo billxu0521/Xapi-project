@@ -1115,9 +1115,7 @@ window.send_log = function (_user_name,_event_type,_event_key) {
         verb_id: _verb_id,
         object_id: _object_id,
         url: _url,
-        site:_object_id,
-        event_type:_event_type,
-        event_key:_event_key
+        site:_object_id
     }
     $.cwise_xAPI_send(_params);
     console.log(_params);
