@@ -16,7 +16,7 @@ Config.actor = { "mbox":"pulipuli.chen@gmail.com", "name":"pudding" };
 	/*
 	 * LRS CONFIG
 	 */
-	$.CWISE_LRS_CONFIG = {
+	$.LRS_CONFIG = {
         "endpoint" : "http://140.119.61.113:1510/xAPI/",
         "auth" : "Basic " + toBase64('dlll4user:dlll4pass')
 	};
@@ -25,7 +25,7 @@ Config.actor = { "mbox":"pulipuli.chen@gmail.com", "name":"pudding" };
 	/*
 	 * USER DEFAULT EMAIL
 	 */
-	$.CWISE_ACTOR_CONFIG = {
+	$.ACTOR_CONFIG = {
 	
 		"mbox" : "mailto: dlll@example.com"
 	};
