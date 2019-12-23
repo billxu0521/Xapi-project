@@ -265,7 +265,7 @@
 				{
 					"response": "201511241706",
 					"extensions": {
-							"http://dspace.ccstw.nccu.edu.tw/": 
+							_site: 
 							{
 								"event_type":_params.event_type,
 								"event_key":_params.event_key,
@@ -305,85 +305,4 @@
 	};//$.cwise_xAPI_send = function (_verb_id, _object_id, _object_description) {
  })(jQuery);
  
- // (function ($) {
-// //TEST_DEMO_LINK
-// //function cwise_xAPI_demoLink(){
-	// $.fn.cwise_xAPI_demoLink = function(){
-		
-			// $(this).click(function(){
-			
-			
-			// var conf = {  //public 
-				// "endpoint" : "http://exp-lrs-2015.dlll.nccu.edu.tw:15180/xAPI/",  
-				// "auth" : "Basic " + toBase64(':')
-				// //"user" : "",
-				// //"password" : ""
-			// }
-			// //ADL.XAPIWrapper.updateAuth(conf.endpoint, conf.user, conf.password); //改變設定檔？
-
-			// ADL.XAPIWrapper.changeConfig(conf); //set設定檔	
-			// //console.log("1.set conf");
-		
-			// gameId = ADL.ruuid(); //是什麼的id？流水編號
-			// //gameId = "11111";
-			// //USER_ID = "DEMO_USER";
-			// var _user_id = $.cwise_xAPI_getUsername();
-			
-
-			// var demo_obj = {
-				// "id": _user_id,	
-				// "definition":{
-					// "type":"type:text",
-					// "name":{"en-US":"DEMO TEST - DLLL LAB"},
-					// "description":{"en-US":"DEMO TEST SEND"}
-				// }
-			// };
-			// //_actor = { "mbox":"demo@gmail.com", "name":"demo" };
-			// //_actor_JSON = JSON.parse(_actor);
-		
-			// /*var _stmt = {
-				// "actor":{ "mbox":"demo@gmail.com", "name":"demo" },
-				// "verb":{"id":"http://exp-lrs-2015.dlll.nccu.edu.tw:15180/xAPI/verbs/attempted",
-						// "display":{"en-US":"tested"}
-				// },
-				// "object":demo_obj
-			// };*/
-
-			// var _stmt = {
-				// "actor" : {"mbox" : "mailto:demo_stmt@example.com"},
-				// "verb" : {"id" : "http://adlnet.gov/expapi/verbs/answered",
-				// "display" : {"en-US" : "demoTest1ed"}
-				// },
-				// "object" :{
-					// "id":"http://adlnet.gov/expapi/activities/question", 
-					// "definition":{
-						// "type":"type:text",		
-						// "name":{"en-US":"DEMO TEST - DLLL LAB"},
-						// "description":{"en-US":"DEMO TEST SEND"}
-					// }
-				// }	
-	
-			// };	//var _stmt = {		
-		
-			// var stmt = {"actor" : {"mbox" : "mailto:demostmt@example.com"}, //抓系統目前的user!!!
-						// "verb" : {"id" : "http://adlnet.gov/expapi/verbs/answered",
-							// "display" : {"en-US" : "Tested"}
-						// },
-						// "object" : {"id" : "http://adlnet.gov/expapi/activities/question"}};
-			// var resp_obj = ADL.XAPIWrapper.sendStatement(stmt);
-			// ADL.XAPIWrapper.log("[" + resp_obj.id + "]: " + resp_obj.xhr.status + " - " + resp_obj.xhr.statusText);
-			// //console.log("2.send statement");	
-			// //console.log(_stmt);
-			
-
-			// var _username = Cookies.get('username');		
-			// alert("user is " + _username);
-		
-			// });//taeget.click(function(){
-	// };//$.fn.cwise_xAPI_demoLink = function(){
-	
-// })(jQuery);
-
-// -------------------------------------
-
 
