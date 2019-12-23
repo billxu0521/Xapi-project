@@ -1,6 +1,6 @@
  (function ($) {
 	//console.log("3. cwise_object_config.js");	
-	$.cwise_object_config = {
+	$.object_config = {
 	    "http://dlll-xapi.nccu.edu.tw/activities/lms":{
 			//display: {"en-US" : _verb_display}
 			//display: {"en-US" : "LMS"}
@@ -44,22 +44,22 @@
 	 //* $.cwise_getVerbDisplay("login");
 	//console.log("2. cwise_object_config.js");	
 
-	$.cwise_getObjectNameDescription = function (_object_id) {
+	$.getObjectNameDescription = function (_object_id) {
 		var _id;
 		 //console.log("cwise_object_config.js");	
-		if (typeof($.cwise_object_config[_object_id]) !== "undefined") {
-			_id = $.cwise_object_config[_object_id].id;
+		if (typeof($.object_config[_object_id]) !== "undefined") {
+			_id = $.object_config[_object_id].id;
 		}
 		
 		var _name;
 		 //console.log("cwise_object_config.js");	
-		if (typeof($.cwise_object_config[_object_id]) !== "undefined") {
-			_name = $.cwise_object_config[_object_id].name;
+		if (typeof($.object_config[_object_id]) !== "undefined") {
+			_name = $.object_config[_object_id].name;
 		}
 		
 		var _description;
-		if (typeof($.cwise_object_config[_object_id]) !== "undefined") {
-			_description = $.cwise_object_config[_object_id].description;
+		if (typeof($.object_config[_object_id]) !== "undefined") {
+			_description = $.object_config[_object_id].description;
 		}
 		
 		// var _moreInfo;
@@ -68,13 +68,13 @@
 		// }
 		
 		var _extensions;
-		if (typeof($.cwise_object_config[_object_id]) !== "undefined") {
-			_extensions = $.cwise_object_config[_object_id].extensions;
+		if (typeof($.object_config[_object_id]) !== "undefined") {
+			_extensions = $.object_config[_object_id].extensions;
 		}
 		
 		var _definition;
-		if (typeof($.cwise_object_config[_object_id]) !== "undefined") {
-			_definition = $.cwise_object_config[_object_id].definition;
+		if (typeof($.object_config[_object_id]) !== "undefined") {
+			_definition = $.object_config[_object_id].definition;
 		}
 		
 		var _NameDescription = {
@@ -101,9 +101,9 @@
 	$.cwise_getObject = function (_object_id, _field) {
 		var _display;
 		
-		if (typeof($.cwise_object_config[_object_id]) !== "undefined" 
-			&& typeof($.cwise_object_config[_object_id][_field]) !== "undefined") {
-			_display = $.cwise_object_config[_object_id][_field];
+		if (typeof($.object_config[_object_id]) !== "undefined" 
+			&& typeof($.object_config[_object_id][_field]) !== "undefined") {
+			_display = $.object_config[_object_id][_field];
 		}
 		
 		return _display;
