@@ -1108,7 +1108,6 @@ window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
     var _username = _user_name;
     //設定目前使用者
     $.xAPI_setUsername(_username);
-    console.log(_event_content);
     //送出登入記錄->lrs
     var _verb_id = "https://w3id.org/xapi/dod-isd/verbs/click"; //LOGIN
     var _object_id = "http://dspace.ccstw.nccu.edu.tw/"; //LMS
@@ -1117,7 +1116,6 @@ window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
         verb_id: _verb_id,
         object_id: _object_id,
         url: _url,
-        
         extensions:{
             "http://dspace.ccstw.nccu.edu.tw/": 
             {
