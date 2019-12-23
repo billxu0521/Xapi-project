@@ -1121,7 +1121,7 @@ window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
         extensions:{
             "http://dspace.ccstw.nccu.edu.tw/": 
             {
-                "event_type":event_type,
+                "event_type":_event_type,
                 "event_key":_event_key,
                 "event_content":event_content
             }
