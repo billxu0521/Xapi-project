@@ -282,8 +282,8 @@
 			"extensions": {
 						_site: 
 						{
-							"event_type":_params.event_type,
-							"event_key":_params.event_key
+							event_type:_params.event_type,
+							event_key:_params.event_key
 						}
 				}
 		};
