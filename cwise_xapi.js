@@ -309,14 +309,11 @@
 			
 			"result": //_result{}
 				{
+					"response": "1",
 					"extensions": {
 							_site: 
 							{
-								question_01:"123",
-								answer_01: "abc",
-								question_02:"測試",
-								answer_02: "abc4",
-								note: "blablabla..."
+								question_01:"123"
 							}
 					}
 				}
