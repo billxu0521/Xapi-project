@@ -9,20 +9,20 @@ var _local_debug = false;
 
 if (_local_debug === true) {
     CSS_URL = "https://localhost/GA-project/config/vinson.rd.ssic.nccu.edu.tw.css";
-    LIB_URL = "https://localhost/GA-project/ga_inject_lib.js";
+    LIB_URL = "https://localhost/GA-project/xapi_inject_lib.js";
     console.log("[LOCAL TEST MODE]");
 }
 else {
     CSS_URL = "https://billxu0521.github.io/Xapi-project/config/nccuir.lib.nccu.edu.tw.css";
-    LIB_URL = "https://billxu0521.github.io/Xapi-project/ga_inject_lib.js";
+    LIB_URL = "https://billxu0521.github.io/Xapi-project/xapi_inject_lib.js";
     SHA_URL = "https://billxu0521.github.io/Xapi-project/2.5.3-crypto-sha1.js";
     BASE_URL = "https://billxu0521.github.io/Xapi-project/base64.js";
     WRAPPER_URL = "https://billxu0521.github.io/Xapi-project/xapiwrapper.min.js";
 
-    LRS_URL = "https://billxu0521.github.io/Xapi-project/cwise_lrs_config.js";
-    OBJ_URL = "https://billxu0521.github.io/Xapi-project/cwise_object_config.js";
-    VERB_URL = "https://billxu0521.github.io/Xapi-project/cwise_verb_config.js";
-    XAPI_URL = "https://billxu0521.github.io/Xapi-project/cwise_xapi.js";
+    LRS_URL = "https://billxu0521.github.io/Xapi-project/lrs_config.js";
+    OBJ_URL = "https://billxu0521.github.io/Xapi-project/object_config.js";
+    VERB_URL = "https://billxu0521.github.io/Xapi-project/verb_config.js";
+    XAPI_URL = "https://billxu0521.github.io/Xapi-project/xapi.js";
 
     CACHE_LIB_URL = "https://billxu0521.github.io/Xapi-project/cache.js";
 }
