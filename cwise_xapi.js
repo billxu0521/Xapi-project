@@ -307,7 +307,7 @@
 			"object" : _obj,
 			//"object" : _object_id
 			
-			"result": 
+			"result": //_result{}
 				"extensions": {
 							_site: 
 							{
