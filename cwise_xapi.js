@@ -125,7 +125,7 @@
 		
 		var _currentNode=_params.currentNode;
 		var _cookieNode=Cookies.get('currentNode');
-		let _site = (_params.site).toString();
+		let _site = "\"" + (_params.site).toString() + "\"";
 		// var _runId= _params.runId;
 		
 		// var _pageX= _params.pageX;
@@ -249,7 +249,7 @@
 		};
 		console.log("3._obj", _object_id);
 		 
-		console.log(_params.event_content);
+		console.log(_site);
 		//----stmt 測試用-------------			
 		var stmt = {
 			"actor" : _actor,
