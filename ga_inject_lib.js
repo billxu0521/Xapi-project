@@ -1104,7 +1104,7 @@ window.getCookie = function(cname) {
 	return "";
 };
 
-window.send_log = function (_user_name,_event_type,_event_key,_event_content) {
+window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
     var _username = _user_name;
     //設定目前使用者
     $.cwise_xAPI_setUsername(_username);
