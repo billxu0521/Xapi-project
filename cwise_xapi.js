@@ -125,7 +125,7 @@
 		
 		var _currentNode=_params.currentNode;
 		var _cookieNode=Cookies.get('currentNode');
-		
+		let _site = _params.site;
 		// var _runId= _params.runId;
 		
 		// var _pageX= _params.pageX;
@@ -279,7 +279,7 @@
 		//result
 		var _result={
 			"extensions": {
-						_params.site: 
+						_site: 
 						{
 							"event_type":_params.event_type,
 							"event_key":_params.event_key
