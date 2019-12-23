@@ -267,9 +267,9 @@
 					"extensions": {
 							"http://dspace.ccstw.nccu.edu.tw/": 
 							{
-								event_type:_params.event_type,
-								event_key:_params.event_key,
-								event_content:_params.event_content
+								"event_type":_params.event_type,
+								"event_key":_params.event_key,
+								"event_content":_params.event_content
 							}
 					}
 				}
