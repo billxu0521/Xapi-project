@@ -1123,7 +1123,7 @@ window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
             {
                 "event_type":_event_type,
                 "event_key":_event_key,
-                "event_content":event_content
+                "event_content":_event_content
             }
         }   
     }
