@@ -1,6 +1,6 @@
  (function ($) {
  
-	$.cwise_verb_config = {
+	$.verb_config = {
 	    "http://purl.org/xapi/adl/verbs/logged-in":{
 		    //id: "login",
 			//display: {"en-US" : _verb_display}
@@ -41,11 +41,11 @@
 	/**
 	 * $.cwise_getVerbDisplay("login");
 	 */
-	$.cwise_getVerbDisplay = function (_verb_id) {
+	$.getVerbDisplay = function (_verb_id) {
 		var _display;
-		console.log("cwise_verb_config.js");	
-		if (typeof($.cwise_verb_config[_verb_id]) !== "undefined") {
-			_display = $.cwise_verb_config[_verb_id].display;
+		console.log("verb_config.js");	
+		if (typeof($.verb_config[_verb_id]) !== "undefined") {
+			_display = $.verb_config[_verb_id].display;
 		}
 		
 		return _display;
@@ -56,12 +56,12 @@
 	 * $.cwise_getVerb("login", "name");
 	 * $.cwise_getVerb("login", "id");
 	 */
-	$.cwise_getVerb = function (_verb_id, _field) {
+	$.getVerb = function (_verb_id, _field) {
 		var _display;
 		
-		if (typeof($.cwise_verb_config[_verb_id]) !== "undefined" 
-			&& typeof($.cwise_verb_config[_verb_id][_field]) !== "undefined") {
-			_display = $.cwise_verb_config[_verb_id][_field];
+		if (typeof($.verb_config[_verb_id]) !== "undefined" 
+			&& typeof($.verb_config[_verb_id][_field]) !== "undefined") {
+			_display = $.verb_config[_verb_id][_field];
 		}
 		
 		return _display;
