@@ -308,13 +308,15 @@
 			//"object" : _object_id
 			
 			"result": //_result{}
-				"extensions": {
+				{
+					"extensions": {
 							_site: 
 							{
 								event_type:_params.event_type,
 								event_key:_params.event_key
 							}
 					}
+				}
 			/*
 			{
 				"response": "201511241706",
