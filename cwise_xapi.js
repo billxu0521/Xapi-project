@@ -245,57 +245,12 @@
 					//""+_url+"":{"node":""+_currentNode+""}
 				}
 			},
-			
-			
-			//"definition":_object_display,
-			/*
-			"definition":{
-				"name":{"en-US":"DEMO TEST - DLLL LAB"},
-				"description":{"en-US":"DEMO TEST SEND"}
-			},
-			*/
-			
 			"objectType": "Activity"
 		};
 		console.trace(_currentNode);
 		console.log("3._obj", _object_id);
-		
-		//----_stmt 較詳細範例-----------
-		// var _stmt = {
-			// "actor" : {"mbox" : "mailto:demo_stmt@example.com"},
-			// "verb" : {"id" : "http://adlnet.gov/expapi/verbs/answered",
-			// "display" : {"en-US" : "demoTest1ed"}
-			// },
-			// "object" :{
-				// "id":"http://adlnet.gov/expapi/activities/question", 
-				// "definition":{
-					// "type":"type:text",		
-					// "name":{"en-US":"DEMO TEST - DLLL LAB"},
-					// "description":{"en-US":"DEMO TEST SEND"}
-				// }
-			// }		
-		// };	//var _stmt = {		
-		
-		//result
-		/*
-		var _result={
-			"extensions": {
-						_site: 
-						{
-							event_type:_params.event_type,
-							event_key:_params.event_key
-						}
-				}
-		};
-		
-		var _response = {
-			"url" :  _params.result_response_url,
-			"node" : _params.result_response_node,
-			"statement" : _params.result_response_statement
-		};
-		*/
-		// _response=JSON.stringify(_response);   
-
+		 
+		console.log(_site);
 		//----stmt 測試用-------------			
 		var stmt = {
 			"actor" : _actor,
