@@ -28,7 +28,7 @@ else {
 }
 
 
-var exec = function () {
+var x_exec = function () {
     auto_x_set_x_user_id();   
     //搜尋按鈕
     x_mouse_click_event(".glyphicon glyphicon-search","Click");
@@ -69,7 +69,7 @@ $(function () {
     $.getScript(X_XAPI_URL);
     $.getScript(X_LIB_URL, function () {
         x_setup(function () {
-            exec();
+            x_exec();
         });
     });
 });
