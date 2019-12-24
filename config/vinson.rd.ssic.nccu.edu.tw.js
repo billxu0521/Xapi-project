@@ -8,37 +8,37 @@ GA_TRACE_CODE = "UA-89833109-4";
 var _local_debug = false;
 
 if (_local_debug === true) {
-    CSS_URL = "https://localhost/GA-project/config/vinson.rd.ssic.nccu.edu.tw.css";
-    LIB_URL = "https://localhost/GA-project/xapi_inject_lib.js";
+    X_CSS_URL = "https://localhost/GA-project/config/vinson.rd.ssic.nccu.edu.tw.css";
+    X_LIB_URL = "https://localhost/GA-project/xapi_inject_lib.js";
     console.log("[LOCAL TEST MODE]");
 }
 else {
-    CSS_URL = "https://billxu0521.github.io/Xapi-project/config/nccuir.lib.nccu.edu.tw.css";
-    LIB_URL = "https://billxu0521.github.io/Xapi-project/xapi_inject_lib.js";
-    SHA_URL = "https://billxu0521.github.io/Xapi-project/2.5.3-crypto-sha1.js";
-    BASE_URL = "https://billxu0521.github.io/Xapi-project/base64.js";
-    WRAPPER_URL = "https://billxu0521.github.io/Xapi-project/xapiwrapper.min.js";
+    X_CSS_URL = "https://billxu0521.github.io/Xapi-project/config/nccuir.lib.nccu.edu.tw.css";
+    X_LIB_URL = "https://billxu0521.github.io/Xapi-project/xapi_inject_lib.js";
+    X_SHA_URL = "https://billxu0521.github.io/Xapi-project/2.5.3-crypto-sha1.js";
+    X_BASE_URL = "https://billxu0521.github.io/Xapi-project/base64.js";
+    X_WRAPPER_URL = "https://billxu0521.github.io/Xapi-project/xapiwrapper.min.js";
 
-    LRS_URL = "https://billxu0521.github.io/Xapi-project/lrs_config.js";
-    OBJ_URL = "https://billxu0521.github.io/Xapi-project/object_config.js";
-    VERB_URL = "https://billxu0521.github.io/Xapi-project/verb_config.js";
-    XAPI_URL = "https://billxu0521.github.io/Xapi-project/xapi.js";
+    X_LRS_URL = "https://billxu0521.github.io/Xapi-project/lrs_config.js";
+    X_OBJ_URL = "https://billxu0521.github.io/Xapi-project/object_config.js";
+    X_VERB_URL = "https://billxu0521.github.io/Xapi-project/verb_config.js";
+    X_XAPI_URL = "https://billxu0521.github.io/Xapi-project/xapi.js";
 
-    CACHE_LIB_URL = "https://billxu0521.github.io/Xapi-project/cache.js";
+    X_CACHE_LIB_URL = "https://billxu0521.github.io/Xapi-project/cache.js";
 }
 
 
 var exec = function () {
-    auto_set_user_id();   
+    auto_x_set_x_user_id();   
     //搜尋按鈕
-    ga_mouse_click_event(".glyphicon glyphicon-search","Click");
-    ga_mouse_click_event('a[title="文集瀏覽"]', "Click", function (_ele) {
+    x_mouse_click_event(".glyphicon glyphicon-search","Click");
+    x_mouse_click_event('a[title="文集瀏覽"]', "Click", function (_ele) {
         return _ele.text();});
-    ga_mouse_click_event(".evenRowEvenCol", "Click");
-    ga_mouse_click_event(".oddRowEvenCol", "Click");
-    ga_mouse_click_event("[href]", "Click", function (_ele) {
+    x_mouse_click_event(".evenRowEvenCol", "Click");
+    x_mouse_click_event(".oddRowEvenCol", "Click");
+    x_mouse_click_event("[href]", "Click", function (_ele) {
         return _ele.text();});
-    ga_mouse_click_event("[name='submit']", "Click", function (_ele) {
+    x_mouse_click_event("[name='submit']", "Click", function (_ele) {
         return _ele.text();});
    
 
@@ -50,7 +50,7 @@ var exec = function () {
             return "start-year=" + form.find('select[name="start-year"]').val();
         });
     */
-    ga_submit_event("form", "Form", function (_ele) {
+    x_submit_event("form", "Form", function (_ele) {
         return _ele.text();});
     
 };
@@ -68,7 +68,7 @@ $(function () {
     $.getScript(VERB_URL);
     $.getScript(XAPI_URL);
     $.getScript(LIB_URL, function () {
-        ga_setup(function () {
+        x_setup(function () {
             exec();
         });
     });
