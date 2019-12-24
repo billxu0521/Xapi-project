@@ -1,15 +1,7 @@
 /**
  * @author BillXu
- * https://billxu0521.github.io/GA-project/ga_inject_lib.js
+ * https://billxu0521.github.io/Xapi-project/ga_inject_lib.js
  */
-
-/**
- * 預設GA_TRACE_CODE
- * @type String
- */
-if (typeof(GA_TRACE_CODE) === "undefined") {
-    GA_TRACE_CODE = "UA-89833109-1";
-}
 
 /**
  * 使用者ID的欄位 "X_DIMENSION1"
