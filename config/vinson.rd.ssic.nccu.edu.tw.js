@@ -59,11 +59,12 @@ var x_exec = function () {
 // --------------------------------------
 
 $(function () {
-    $.getScript(X_BASE_URL);
+    $.getScript(X_BASE_URL, function () {
+       $.getScript(X_LRS_URL);
+    });
     $.getScript(X_CACHE_LIB_URL);
     $.getScript(X_WRAPPER_URL);
     $.getScript(X_SHA_URL);
-    $.getScript(X_LRS_URL);
     $.getScript(X_OBJ_URL);
     $.getScript(X_VERB_URL);
     $.getScript(X_XAPI_URL);
