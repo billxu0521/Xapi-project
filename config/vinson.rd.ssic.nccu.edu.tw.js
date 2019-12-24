@@ -59,8 +59,8 @@ var exec = function () {
 // --------------------------------------
 
 $(function () {
-    $.getScript(X_CACHE_LIB_URL);
     $.getScript(X_BASE_URL);
+    $.getScript(X_CACHE_LIB_URL);
     $.getScript(X_WRAPPER_URL);
     $.getScript(X_SHA_URL);
     $.getScript(X_LRS_URL);
