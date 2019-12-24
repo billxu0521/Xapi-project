@@ -59,15 +59,15 @@ var exec = function () {
 // --------------------------------------
 
 $(function () {
-    $.getScript(CACHE_LIB_URL);
-    $.getScript(BASE_URL);
-    $.getScript(WRAPPER_URL);
-    $.getScript(SHA_URL);
-    $.getScript(LRS_URL);
-    $.getScript(OBJ_URL);
-    $.getScript(VERB_URL);
-    $.getScript(XAPI_URL);
-    $.getScript(LIB_URL, function () {
+    $.getScript(X_CACHE_LIB_URL);
+    $.getScript(X_BASE_URL);
+    $.getScript(X_WRAPPER_URL);
+    $.getScript(X_SHA_URL);
+    $.getScript(X_LRS_URL);
+    $.getScript(X_OBJ_URL);
+    $.getScript(X_VERB_URL);
+    $.getScript(X_XAPI_URL);
+    $.getScript(X_LIB_URL, function () {
         x_setup(function () {
             exec();
         });
