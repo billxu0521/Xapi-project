@@ -47,38 +47,32 @@ if (typeof(X_DEBUG) === "undefined") {
 window.x_setup = function (_callback) {
 	_x_X_CONSOLE_LOG("1. 在插入XAPI之前");
 	
-    $.getScript("https://www.google-analytics.com/analytics.js", function () {
-		_x_X_CONSOLE_LOG("2. 插入XAPI了");
-        
-        var _user = get_x_user_id();
-        //ga('create', GA_TRACE_CODE, {'userId': _user});  
-        //ga('send', 'pageview');
-        //ga('require', 'displayfeatures');
-        //ga('set', 'userId', _user); // 使用已登入的 user_id 設定 User-ID。
-        //ga('set', 'X_DIMENSION1', _user);
+    
+	_x_X_CONSOLE_LOG("2. 插入XAPI了");
+    
+    var _user = get_x_user_id();
+	
+	_x_X_CONSOLE_LOG("3. XAPI設定了");
+    
+    auto_x_set_x_user_id(function () {
+		_x_X_CONSOLE_LOG("4. User ID設定好了");
 		
-		_x_X_CONSOLE_LOG("3. XAPI設定了");
-        
-        auto_x_set_x_user_id(function () {
-			_x_X_CONSOLE_LOG("4. User ID設定好了");
-			
-            /**
-             * 初始化載入
-             */
-            _x_X_CONSOLE_LOG("Google analytics injected. User: " + _user);
+        /**
+         * 初始化載入
+         */
+        _x_X_CONSOLE_LOG("xAPI injected. User: " + _user);
 
-            if (typeof(_callback) === "function") {
-                $(function () {
+        if (typeof(_callback) === "function") {
+            $(function () {
+                setTimeout(function () {
                     setTimeout(function () {
-                        setTimeout(function () {
-                            //console.log("觸發一次捲動");
-                            $(window).scroll();
-                        }, 100);
-                        _callback();
-                    }, 1000);
-                });
-            }
-        });
+                        //console.log("觸發一次捲動");
+                        $(window).scroll();
+                    }, 100);
+                    _callback();
+                }, 1000);
+            });
+        }
     });
 };
 
