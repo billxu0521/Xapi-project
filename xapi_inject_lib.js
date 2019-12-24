@@ -313,7 +313,8 @@ window.fin_x_exp = function (){
     //_x_X_CONSOLE_LOG('end_x_exp: ' + _name + ", sec: " + _time);
     _x_X_CONSOLE_LOG('end_x_exp: ' + _name);
     
-    ga("send", "event", "end_x_exp", _name);
+    //ga("send", "event", "end_x_exp", _name);
+    send_log("event", _name, "end_x_exp","end_x_exp");
     auto_x_set_x_user_id();
 };
 
@@ -337,6 +338,7 @@ window.x_mouse_over_event = function (_selector, _event_type, _name) {
         
         _x_X_CONSOLE_LOG([_event_type, _name_data, _event_key]);
         //ga("send", "event", _event_type, _name_data, _event_key);   
+        send_log(_event_type, _name, _event_key,_name_data);
     });
 };
 
@@ -378,6 +380,7 @@ window.x_mouse_over_out_event = function(_selector, _event_type, _name) {
         if (_interval > X_STAY_SAVE_MIN_INTERVAL) {
             _x_X_CONSOLE_LOG([_event_type, _event_key +  + ": end", _name_data, _interval, "記錄"]);
             //ga("send", "event", _event_type, _name_data, _event_key, _interval);
+            send_log(_event_type, _name, _event_key,(_name_data + _interval));
         }
         else {
             _x_X_CONSOLE_LOG([_event_type, _event_key + ": end", _name_data, _interval, "不記錄"]);
@@ -430,7 +433,8 @@ window.x_mouse_drag_event = function(_selector, _event_type, _name) {
         var _interval = (new Date()).getTime() - X_TIMER[_id];
         _interval = parseInt(_interval/1000, 10);
         _x_X_CONSOLE_LOG([_event_type, _event_key +  + ": end", _name_data, _interval, "記錄"]);
-        ga("send", "event", _event_type, _name_data, _event_key, _interval);
+        //ga("send", "event", _event_type, _name_data, _event_key, _interval);
+        send_log(_event_type, _name, _event_key,(_name_data + _interval));
         X_TIMER[_id] = false;
     });
 };
@@ -492,7 +496,8 @@ window.x_mouse_down_event = function (_selector, _event_type, _name) {
     $(_selector + ":not(." + _classname + ")").mousedown(function () {
         var _name_data = _x_get_element_name(this, _selector, _name);
         _x_X_CONSOLE_LOG([_event_type, _name_data, _event_key]);
-        ga("send", "event", _event_type, _name_data, _event_key);
+        send_log(_event_type, _name, _event_key,_name_data);
+        //ga("send", "event", _event_type, _name_data, _event_key);
     }).addClass(_classname);
 };
 
@@ -507,6 +512,7 @@ window.x_send_event = function (_event_type, _name) {
     var _name_data = _x_get_element_name(document, "", _name);
     _x_X_CONSOLE_LOG([_event_type, _name_data, _event_key]);
     //ga("send", "event", _event_type, _name_data, _event_key);
+    send_log(_event_type, _name, _event_key,_name_data);
 };
 
 /**
@@ -531,6 +537,7 @@ window.x_mouse_touch_event = function (_selector, _event_type, _name) {
 
           _x_X_CONSOLE_LOG([_event_type, _name_data, _event_key]);
           //ga("send", "event", _event_type, _name_data, _event_key);
+          send_log(_event_type, _name, _event_key,_name_data);
       }).addClass(_classname);
 };
 
@@ -556,6 +563,7 @@ window.x_input_change_event = function (_selector, _event_type, _name) {
         var _name_data = _x_get_element_name(this, _selector, _input_name + "=" + $(this).val());    
         _x_X_CONSOLE_LOG([_event_type, _name_data, _event_key]);
         //ga("send", "event", _event_type, _name_data, _event_key);
+        send_log(_event_type, _name, _event_key,_name_data);
     }).addClass(_classname);
 };
 
@@ -584,6 +592,7 @@ window.x_input_keydown_enter_event = function (_selector, _event_type, _name) {
             
             _x_X_CONSOLE_LOG([_event_type, _name_data, _event_key]);
             //ga("send", "event", _event_type, _name_data, _event_key);
+            send_log(_event_type, _name, _event_key,_name_data);
         }
     }).addClass(_classname);
 };
@@ -648,7 +657,8 @@ window.x_submit_event = function (_selector, _event_type, _name) {
         var _name_data = _x_get_element_name(this, _selector, _name);
         
         _x_X_CONSOLE_LOG([_event_type, _name_data, _event_key]);
-        ga("send", "event", _event_type, _name_data, _event_key);
+        //ga("send", "event", _event_type, _name_data, _event_key);
+        send_log(_event_type, _name, _event_key,_name_data);
         var _form = $(this);
         if (_form.prop("tagName").toLowerCase() !== "form") {
             _form = _form.parents("form:first");
@@ -722,7 +732,8 @@ window.x_mouse_scroll_in_out_event = function(_selector, _event_type, _name) {
             var _interval = parseInt(((new Date()).getTime() - X_TIMER[_id])/1000, 10);
             if (_interval > X_STAY_SAVE_MIN_INTERVAL) {
                 _x_X_CONSOLE_LOG([_event_type, _event_key + ": end", _name_data, _interval, "記錄"]);
-                ga("send", "event", _event_type, _name_data, "scroll_in", _interval);
+                //ga("send", "event", _event_type, _name_data, "scroll_in", _interval);
+                send_log(_event_type, _name, _event_key,_name_data);
             }
             else {
                 _x_X_CONSOLE_LOG([_event_type, _event_key + ": end", _name_data, _interval, "不記錄"]);
@@ -793,6 +804,7 @@ window.x_mouse_scroll_in_event = function(_selector, _event_type, _name) {
                     var _interval = parseInt(((new Date()).getTime() - X_TIMER[_id])/1000, 10);
                     _x_X_CONSOLE_LOG([_event_type, _event_key + ": end", _name_data, _interval, "記錄"]);
                     //ga("send", "event", _event_type, _name_data, "scroll_in", _interval);
+                    send_log(_event_type, _name, _event_key,(_name_data + _interval));
                 }
                 X_TIMER[_id] = false;
             }, X_STAY_SAVE_MIN_INTERVAL * 1000);
