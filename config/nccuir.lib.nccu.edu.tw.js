@@ -182,7 +182,7 @@ $(function () {
     $.getScript(X_XAPI_URL);
 
     $.getScript(X_LIB_URL, function () {
-        x_ga_setup(function () {
+        x_setup(function () {
             x_exec();
             $('#chart svg g g g.node').on('click',function(){
                 x_listcheck();
