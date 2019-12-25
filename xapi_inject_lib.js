@@ -964,7 +964,7 @@ window.x_getCookie = function(cname) {
 window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
     var _username = _user_name;
     //設定目前使用者
-    $.xAPI_setUsername(_username);
+    //f$.xAPI_setUsername(_username);
     //送出登入記錄->lrs
     var _verb_id = "https://w3id.org/xapi/dod-isd/verbs/click"; //LOGIN
     var _object_id = "http://dspace.ccstw.nccu.edu.tw/"; //LMS
@@ -993,7 +993,7 @@ window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
 X_CONSOLE_LOG = [];
 
 /**
- * 顯示偵錯訊息: 詳細資訊
+ * 顯示偵錯訊息: 詳細資訊f
  * @param {String} _message
  */
 var _x__console_trace = function (_message) {

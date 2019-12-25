@@ -53,7 +53,8 @@
 	 * ***********************/
 	$.xAPI_setUsername = function(_username){
 		
-		Cookies.get('username', _username, { path: '/' });//Save username in cookie
+		sessionStorage.setItem('xapi_username',_username);
+		//Cookies.get('username', _username, { path: '/' });//Save username in cookie
 	
 	};//$.cwise_xAPI_setUsername = function(_username){
 
@@ -64,7 +65,8 @@
 	 * ***********************/	
 	$.xAPI_getUsername = function(){
 	
-		var _username = Cookies.get('username');
+		//var _username = Cookies.get('username');
+		var _username = sessionStorage.getItem('xapi_username');
 		if ( _username == null ){
 			_username = "guest";
 			//Cookies.get('username', _user, { path: '/' });//Save username in cookie
@@ -124,7 +126,7 @@
 		//console.log("moreInfo:"+_params.moreInfo);
 		
 		var _currentNode=_params.currentNode;
-		var _cookieNode=Cookies.get('currentNode');
+		//var _cookieNode=Cookies.get('currentNode');
 		
 		// var _runId= _params.runId;
 		
