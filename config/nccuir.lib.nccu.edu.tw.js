@@ -120,7 +120,7 @@ var exec = function () {
     
 //-------------------
 
-let listcheck = function (){
+let x_listcheck = function (){
     var _hash = location.hash;
     if (_hash !== "") {
         _hash = "#" + _hash;
@@ -185,10 +185,10 @@ $(function () {
         ga_setup(function () {
             exec();
             $('#chart svg g g g.node').on('click',function(){
-                listcheck();
+                x_listcheck();
             });
             $('#chart svg g g line').on('mouseover',function(){
-                listcheck();
+                x_listcheck();
             });
         });
     });
