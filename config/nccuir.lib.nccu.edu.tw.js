@@ -113,7 +113,7 @@ var exec = function () {
     });
     x_mouse_over_event('#chart svg g g line','Social Network_Link Line')
     x_mouse_click_event('#chart svg g g line','Social Network_Link Line');
-    _mouse_click_event('#menu_r #obj_des li.pubs a','Social Network_Publication');
+    x_mouse_click_event('#menu_r #obj_des li.pubs a','Social Network_Publication');
     
     };
 
