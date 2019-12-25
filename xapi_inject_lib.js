@@ -974,7 +974,7 @@ window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
         object_id: _object_id,
         url: _url,
         extensions:{
-            "http://dspace.ccstw.nccu.edu.tw/": 
+            "http://ah.nccu.edu.tw/": 
             {
                 "event_type":_event_type,
                 "event_key":_event_key,
