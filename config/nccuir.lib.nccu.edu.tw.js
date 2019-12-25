@@ -30,8 +30,8 @@ else {
 }
 
 
-var exec = function () {
-    auto_set_user_id(); 
+var x_exec = function () {
+    auto_x_set_x_user_id(); 
     
     //思洋實驗用
     //主頁
@@ -182,8 +182,8 @@ $(function () {
     $.getScript(X_XAPI_URL);
 
     $.getScript(X_LIB_URL, function () {
-        ga_setup(function () {
-            exec();
+        x_ga_setup(function () {
+            x_exec();
             $('#chart svg g g g.node').on('click',function(){
                 x_listcheck();
             });
