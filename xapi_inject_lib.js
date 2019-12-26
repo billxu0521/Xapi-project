@@ -962,6 +962,7 @@ window.x_getCookie = function(cname) {
 };
 
 window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
+    console.log('send');
     var _username = _user_name;
     var _object_url = sessionStorage.getItem('xapi_url');
     console.log(_object_url);
