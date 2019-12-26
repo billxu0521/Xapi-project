@@ -964,6 +964,7 @@ window.x_getCookie = function(cname) {
 window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
     var _username = _user_name;
     var _object_url = sessionStorage.getItem('xapi_url');
+    console.log(_object_url);
     //設定目前使用者
     //f$.xAPI_setUsername(_username);
     //送出登入記錄->lrs
@@ -975,7 +976,7 @@ window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
         object_id: _object_id,
         url: _url,
         extensions:{
-            _object_url: 
+            'aaa': 
             {
                 "event_type":_event_type,
                 "event_key":_event_key,
