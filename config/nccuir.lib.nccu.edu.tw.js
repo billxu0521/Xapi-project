@@ -171,6 +171,7 @@ let x_listcheck = function (){
 // --------------------------------------
 
 $(function () {
+    sessionStorage.setItem('xapi_url',_local_url);
     $.getScript(X_BASE_URL, function () {
        $.getScript(X_LRS_URL);
     });
