@@ -7,6 +7,7 @@
 GA_TRACE_CODE = "UA-107585606-1";
 
 var _local_debug = false;
+var _local_url = 'http://ah.nccu.edu.tw/';
 
 if (_local_debug === true) {
     CSS_URL = "https://localhost/Xapi-project/config/nccuir.lib.nccu.edu.tw.css";
