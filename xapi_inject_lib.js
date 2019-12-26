@@ -113,6 +113,7 @@ var get_x_user_ip = function(){
 
 USER_IP = undefined;
 USER_IP = sessionStorage.getItem('USERIP');
+console.log(USER_IP);
 window.auto_x_set_x_user_id = function(_callback){
 	
 	_x_X_CONSOLE_LOG("3.1. 開始 auto_x_set_x_user_id");
