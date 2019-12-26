@@ -967,10 +967,8 @@ window.x_getCookie = function(cname) {
 };
 
 window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
-    console.log('send');
     var _username = _user_name;
     var _object_url = sessionStorage.getItem('xapi_url');
-    console.log(_object_url);
     //設定目前使用者
     //f$.xAPI_setUsername(_username);
     //送出登入記錄->lrs
