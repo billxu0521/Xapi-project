@@ -5,6 +5,7 @@
  */
 
 var _local_debug = false;
+var _local_url = 'http://dspace.ccstw.nccu.edu.tw/';
 
 if (_local_debug === true) {
     X_CSS_URL = "https://localhost/GA-project/config/vinson.rd.ssic.nccu.edu.tw.css";
@@ -58,6 +59,7 @@ var x_exec = function () {
 // --------------------------------------
 
 $(function () {
+    sessionStorage.setItem('xapi_url',_local_url);
     $.getScript(X_BASE_URL, function () {
        $.getScript(X_LRS_URL);
     });

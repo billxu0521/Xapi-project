@@ -963,18 +963,19 @@ window.x_getCookie = function(cname) {
 
 window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
     var _username = _user_name;
+    var _object_url = sessionStorage.setItem('xapi_url',_username);
     //設定目前使用者
     //f$.xAPI_setUsername(_username);
     //送出登入記錄->lrs
     var _verb_id = "https://w3id.org/xapi/dod-isd/verbs/click"; //LOGIN
-    var _object_id = "http://dspace.ccstw.nccu.edu.tw/"; //LMS
+    var _object_id = _object_url;
     var _url=window.top.location.href;
     var _params = {
         verb_id: _verb_id,
         object_id: _object_id,
         url: _url,
         extensions:{
-            "http://ah.nccu.edu.tw/": 
+            _object_url: 
             {
                 "event_type":_event_type,
                 "event_key":_event_key,
