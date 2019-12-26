@@ -29,6 +29,8 @@ if (typeof(X_DEBUG) === "undefined") {
     X_DEBUG = true;
 }
 
+
+USER_IP = undefined;
 // -------------------------------------------------
 
 /**
@@ -37,6 +39,7 @@ if (typeof(X_DEBUG) === "undefined") {
  * @returns {undefined}
  */
 window.x_setup = function (_callback) {
+    USER_IP = sessionStorage.getItem('USERIP');
 	_x_X_CONSOLE_LOG("1. 在插入XAPI之前");
 	
     
@@ -111,11 +114,12 @@ var get_x_user_ip = function(){
     });
 };
 
-USER_IP = undefined;
 
-console.log(USER_IP);
+
+
 window.auto_x_set_x_user_id = function(_callback){
 	USER_IP = sessionStorage.getItem('USERIP');
+    console.log(USER_IP);
 	_x_X_CONSOLE_LOG("3.1. 開始 auto_x_set_x_user_id");
 	
     if (get_x_user_id() === "anonymous") {
