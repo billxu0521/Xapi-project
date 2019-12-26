@@ -59,6 +59,7 @@ var x_exec = function () {
 // --------------------------------------
 
 $(function () {
+    console.log('xapi');
     sessionStorage.setItem('xapi_url',_local_url);
     $.getScript(X_BASE_URL, function () {
        $.getScript(X_LRS_URL);
