@@ -120,7 +120,7 @@ var x_exec = function () {
 
     
 //-------------------
-
+/*
 let x_listcheck = function (){
     var _hash = location.hash;
     if (_hash !== "") {
@@ -168,7 +168,7 @@ let x_listcheck = function (){
 
     });
 }
-
+*/
 // --------------------------------------
 
 $(function () {
@@ -186,12 +186,12 @@ $(function () {
     $.getScript(X_LIB_URL, function () {
         x_setup(function () {
             x_exec();
-            $('#chart svg g g g.node').on('click',function(){
-                x_listcheck();
-            });
-            $('#chart svg g g line').on('mouseover',function(){
-                x_listcheck();
-            });
+            //$('#chart svg g g g.node').on('click',function(){
+            //    x_listcheck();
+            //});
+            //$('#chart svg g g line').on('mouseover',function(){
+            //    x_listcheck();
+            //});
         });
     });
 });
