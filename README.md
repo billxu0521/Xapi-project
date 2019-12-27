@@ -35,3 +35,32 @@ $.LRS_CONFIG = {
 		"mbox" : "信箱"
 	};
 ```
+
+
+###xapi_inject_lib.js 設定
+```javascript
+window.send_log = function (_event_type,_user_name,_event_key,_event_content) {
+    var _username = _user_name;
+    var _object_url = sessionStorage.getItem('動詞受體網址');
+    //設定目前使用者
+    //f$.xAPI_setUsername(_username);
+    //送出登入記錄->lrs
+    var _verb_id = "動詞"; //LOGIN
+    var _object_id = _object_url;
+    var _url=window.top.location.href;
+    var _params = {
+        verb_id: _verb_id,
+        object_id: _object_id,
+        url: _url,
+        extensions:{
+            '自定義網址':
+            {
+                "擴充用key":值,
+               	"擴充用key":值
+            }
+        }   
+    }
+    $.xAPI_send(_params);
+};
+```
+
