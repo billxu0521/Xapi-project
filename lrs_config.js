@@ -17,7 +17,7 @@ Config.actor = { "mbox":"pulipuli.chen@gmail.com", "name":"pudding" };
 	 * LRS CONFIG
 	 */
 	$.LRS_CONFIG = {
-        "endpoint" : "http://140.119.61.113:1510/xAPI/",
+        "endpoint" : "https://exp-lrs-server.dlll.nccu.edu.tw/xAPI/",
         "auth" : "Basic " + toBase64('cwise4user:cwise4pass')
 	};
 	
