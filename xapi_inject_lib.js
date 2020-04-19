@@ -317,6 +317,19 @@ window.end_x_exp = function () {
 // -------------------------------------------------------------
 
 /**
+ * 進入頁面的事件
+ * @param {String} _selector
+ * @param {String} _event_type
+ * @param {String|Function} _name
+ */
+window.x_enter_page_event = function (_event_type, _name) {
+    var _event_key = 'mouse_over';
+    send_log(_event_type, _name, _event_key,_name_data);
+    
+};
+
+
+/**
  * 偵測滑鼠移上去的事件
  * @param {String} _selector
  * @param {String} _event_type
