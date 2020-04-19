@@ -324,7 +324,8 @@ window.end_x_exp = function () {
  */
 window.x_enter_page_event = function (_event_type, _name) {
     var _event_key = 'page_enter';
-    var _name_data = window.location.href;
+    
+    var _name_data = _x_get_enter_page_name(window.location.href, _event_type, _name);
     _x_X_CONSOLE_LOG([_event_type, _name_data, _event_key]);
     send_log(_event_type, _name, _event_key,_name_data);
     
@@ -890,6 +891,46 @@ var _x_get_element_name = function (_ele, _event_type, _name) {
         }
     }
     catch (e) {}
+
+    if (typeof(_name) === "string") {
+        _name = _name.trim();
+        
+        while (_name.indexOf("  ") > -1) {
+            _name = _name.split("  ").join(" ");
+        }
+    }
+    
+    _name = _name_header + _name;
+    
+    return _name;
+};
+
+/**
+ * 取得元素的可讀取元素(進入頁面用)
+ * @param {String} _ele
+ * @param {String} _event_type
+ * @param {String} _name
+ * @returns {String|get_element_name._name}
+ * 
+ * window.location.pathname + ": " + 
+ */
+var _x_get_enter_page_name = function (url, _event_type, _name) {
+    
+    var _hash = location.hash;
+    if (_hash !== "") {
+        _hash = "#" + _hash;
+    }
+    
+    var _name_header = get_x_user_id() + ": " + USER_IP + ": " + _get_time() + ": " + window.location.pathname + window.location.search + _hash;
+    
+    _name_header = _name_header + ": ";
+    
+    if (typeof(_name) === "string") {
+        return _name_header + _name;
+    }
+    else if (typeof(_name) === "function") {
+        return _name_header + _name(url);
+    }
 
     if (typeof(_name) === "string") {
         _name = _name.trim();
