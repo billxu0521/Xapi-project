@@ -185,6 +185,8 @@ $(function () {
 
     $.getScript(X_LIB_URL, function () {
         x_setup(function () {
+            send_log('page_enter', '_user', 'page','page');
+
             x_exec();
             //$('#chart svg g g g.node').on('click',function(){
             //    x_listcheck();

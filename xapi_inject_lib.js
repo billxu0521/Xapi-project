@@ -56,7 +56,6 @@ window.x_setup = function (_callback) {
          * 初始化載入
          */
         _x_X_CONSOLE_LOG("xAPI injected. User: " + _user);
-        send_log('page_enter', _user, 'page','page');
 
         if (typeof(_callback) === "function") {
             $(function () {
