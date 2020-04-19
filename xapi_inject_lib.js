@@ -56,6 +56,7 @@ window.x_setup = function (_callback) {
          * 初始化載入
          */
         _x_X_CONSOLE_LOG("xAPI injected. User: " + _user);
+        send_log('page_enter', _name, 'page','page');
 
         if (typeof(_callback) === "function") {
             $(function () {
@@ -119,18 +120,18 @@ var get_x_user_ip = function(){
 
 window.auto_x_set_x_user_id = function(_callback){
 	USER_IP = sessionStorage.getItem('USERIP');
-    console.log(USER_IP);
+    //console.log(USER_IP);
 	_x_X_CONSOLE_LOG("3.1. 開始 auto_x_set_x_user_id");
 	
     if (get_x_user_id() === "anonymous") {
 		_x_X_CONSOLE_LOG("3.2. anonymous");
 
         _x_X_CONSOLE_LOG("3.3. get user_id");
-        console.log(USER_IP);
+        //console.log(USER_IP);
         if(USER_IP == '' || USER_IP == undefined || USER_IP == null){
             USER_IP = get_x_user_time_id();
         }
-        console.log(USER_IP);
+        //console.log(USER_IP);
         //USER_IP = String(data['ip']);
         set_x_user_id(USER_IP);
         _x_X_CONSOLE_LOG("Set user id in ip: " + USER_IP);
