@@ -324,8 +324,10 @@ window.end_x_exp = function () {
  */
 window.x_enter_page_event = function (_event_type, _name) {
     var _event_key = 'page_enter';
-    send_log(_event_type, _name, _event_key);
-    _x_X_CONSOLE_LOG([_event_type, 'page', _event_key]);
+    var _name_data = window.location.href;
+    _x_X_CONSOLE_LOG([_event_type, _name_data, _event_key]);
+    send_log(_event_type, _name, _event_key,_name_data);
+    
     
 };
 
